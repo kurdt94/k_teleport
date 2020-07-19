@@ -17,6 +17,8 @@ Locale.preset_not_found = "> Preset does not exist"
 Locale.arg_not_found = "> No arguments found"
 Locale.auth_fail = "> Teleport command not allowed"
 Locale.not_alive = "> Not alive"
+Locale.coords_save = " > Coords saved at key : "
+Locale.coords_save_failed = " > Coords save failed , missing key "
 
 -- waypoints list ( unreachable locations I left out )
 -- [name] is never used, but kept here for identification

@@ -103,6 +103,18 @@ RegisterCommand("tp", function(source, args, rawCommand)
         else
             -- arguments
             if tonumber(args[1]) == nil then
+                -- SAVE COMMAND
+                if args[1] == 'save' then
+                    if args[1] == 'save' and args[2] ~= nil then
+                        Config.waypoints[args[2]] = GetEntityCoords(PlayerPedId())
+                        print(Locale.coords_save .. args[2])
+                        return
+                    else
+                        print(Locale.coords_save_failed)
+                        return
+                    end
+                end
+                
                 if Config.waypoints[args[1]] ~= nil then
                     local target = vector3(Config.waypoints[args[1]].x,Config.waypoints[args[1]].y,Config.waypoints[args[1]].z)
                     if Config.enable_adminOnly == true then
