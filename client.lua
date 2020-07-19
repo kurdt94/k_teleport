@@ -2,6 +2,7 @@ Config = {}
 Config.enable_fadeOut = true
 Config.enable_adminOnly = true
 Config.fadeTime = 2000
+
 -- waypoints list ( unreachable locations I left out )
 -- https://www.mod-rdr.com/wiki/pages/list-of-rdr2-teleports/
 local waypoints = {
@@ -77,7 +78,6 @@ function ScreenFadeOut()
         end
     end)
     Wait(Config.fadeTime)
-    print("dark")
     return
 end
 
@@ -90,7 +90,6 @@ function ScreenFadeIn()
         end
     end)
     Wait(Config.fadeTime)
-    print("light")
     return
 end
 
@@ -142,11 +141,11 @@ RegisterCommand("tp", function(source, args, rawCommand)
     if DoesEntityExist(_player) and not IsEntityDead(_player) then
         -- no arguments (or if you fuck up with a space)
         if not args[1] or args[1] == ' ' then
-            print("> no arguments")
+            print("> no arguments found")
 
             -- GetWaypointCoords() always returns Vector3
             if isVectorEmpty(_waypoint) then
-                print("> waypoint not found")
+                print("> no waypoint found")
             else
                 print("> waypoint found")
                 local target = _waypoint
