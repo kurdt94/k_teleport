@@ -68,5 +68,5 @@ Config.waypoints = {
     ["gaptooth_breach"] = {x=-6000.769, y=-3319.31, z=-21.72198, name="Gaptooth Breach"},
     ["guarma_beach"] = {x=1997.57, y=-4499.807, z=41.77455, name="Guarma Beach (Shipwreck Beach)"},
     ["guarma_fort"] = {x=999.9134, y=-6749.735, z=63.12267, name="Guarma Fort"},
-    ["back"] =  {x=999.9134, y=-6749.735, z=63.12267, name="Last Location"},
+    ["back"] =  {x=0.0, y=-0.0, z=0.0, name="Last Location"}, -- do not delete!
 }

@@ -11,10 +11,9 @@ function isVectorEmpty(vector)
     end
 end
 
+-- ScreenFadeOut
 function ScreenFadeOut()
-
     DoScreenFadeOut(1000)
-
     Citizen.CreateThread(function ()
         while not IsScreenFadedOut() do
             Wait(100)
@@ -24,8 +23,8 @@ function ScreenFadeOut()
     return
 end
 
+-- ScreenFadeIn
 function ScreenFadeIn()
-
     DoScreenFadeIn(1000)
     Citizen.CreateThread(function ()
         while not IsScreenFadedIn() do
@@ -36,24 +35,19 @@ function ScreenFadeIn()
     return
 end
 
-RegisterNetEvent('k:alert')
-AddEventHandler('k:alert', function(msg)
-    print(msg)
-end)
-
+-- TeleportEvent
 RegisterNetEvent('k:teleport')
 AddEventHandler('k:teleport', function(source,target)
     local ped = PlayerPedId()
     -- ScreenFadeOut :
     if Config.enable_fadeOut then ScreenFadeOut() end
 
-    -- If no Z :
     if target.z == 0.0 then
         for height = 0, 1000 do
             SetEntityCoords(ped, target.x, target.y, target.z)
             local foundground, groundZ, normal = GetGroundZAndNormalFor_3dCoord(target.x, target.y, height + 0.0)
             if foundground then
-
+                print(target.x, target.y, groundZ)
                 SetEntityCoords(ped, target.x, target.y, groundZ)
                 if Config.enable_fadeOut then ScreenFadeIn() end
                 break
@@ -63,7 +57,6 @@ AddEventHandler('k:teleport', function(source,target)
         end
 
     else
-        -- Z = user input
         print(target.x, target.y, target.z)
         SetEntityCoords(ped, target.x, target.y, target.z)
     end
@@ -79,6 +72,7 @@ AddEventHandler('k:teleport', function(source,target)
 
 end)
 
+-- Main TP command
 RegisterCommand("tp", function(source, args, rawCommand)
     print(Locale.title)
     local _source = source
@@ -102,7 +96,6 @@ RegisterCommand("tp", function(source, args, rawCommand)
                     TriggerServerEvent('k:tp',target)
                 else
                     TriggerEvent('k:teleport',_player,target)
-
                 end
 
             end
@@ -111,7 +104,7 @@ RegisterCommand("tp", function(source, args, rawCommand)
             -- arguments
             if tonumber(args[1]) == nil then
                 if Config.waypoints[args[1]] ~= nil then
-                    local target = Config.waypoints[args[1]]
+                    local target = vector3(Config.waypoints[args[1]].x,Config.waypoints[args[1]].y,Config.waypoints[args[1]].z)
                     if Config.enable_adminOnly == true then
                         TriggerServerEvent('k:tp',target)
                     else
@@ -133,9 +126,9 @@ RegisterCommand("tp", function(source, args, rawCommand)
                     end
                     local vector = vector3(target.x,target.y,target.z)
                     if Config.enable_adminOnly == true then
-                        TriggerServerEvent('k:tp',target)
+                        TriggerServerEvent('k:tp',vector)
                     else
-                        TriggerEvent('k:teleport',_player,target)
+                        TriggerEvent('k:teleport',_player,vector)
                     end
                 else
                     print(Locale.wp_invalid)
@@ -147,6 +140,12 @@ RegisterCommand("tp", function(source, args, rawCommand)
         print(Locale.not_alive)
     end
 end, false)
+
+-- Alert from server
+RegisterNetEvent('k:alert')
+AddEventHandler('k:alert', function(msg)
+    print(msg)
+end)
 
 --RegisterCommand("sfi", function(source, args, rawCommand)
 --    ScreenFadeIn()

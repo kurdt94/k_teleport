@@ -10,11 +10,17 @@ AddEventHandler('k:tp', function (target)
         if Config.enable_adminGroups[user.getGroup()] == true then
             if user == nil then
             else
-                TriggerClientEvent('k:teleport',_source,_source,_target)
+                if target.x ~= 0.0 and target.y ~= 0.0 then
+                    TriggerClientEvent('k:teleport',_source,_source,_target)
+                else
+                    TriggerClientEvent('k:alert',_source,Locale.preset_not_found)
+                    return
+                end
             end
         else
               print("user : " .. _source .. " " .. Locale.auth_fail)
               TriggerClientEvent('k:alert',_source,Locale.auth_fail)
+              return
         end
     end)
 end)
