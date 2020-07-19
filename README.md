@@ -14,10 +14,10 @@ REDM : Teleport Script with admin support ( Teleport to waypoint, custom X,Y,Z o
     
 # configuration [config.lua]
     " adminOnly can be enabled or disabled " (default: on)
-    " ScreenFadeOut can be disabled " (default: on)
     " enable or disable userGroups " (default: admin AND superadmin)
+    " ScreenFadeOut can be disabled " (default: on)
     " add or remove preset-waypoints " 
-    " Translation can be done here"
+    " Translation can be done here "
     
 # notes
 - last update: 2020-07-19
