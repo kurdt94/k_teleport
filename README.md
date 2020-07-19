@@ -16,6 +16,7 @@ REDM : Teleport Script with admin support ( Teleport to waypoint, custom X,Y,Z o
     " ScreenFadeOut can be disabled " (default: on)
     " enable or disable userGroups " (default: admin AND superadmin)
     " add or remove preset-waypoints "
+    " Translation can be done here"
     
 # notes
 - last update: 2020-07-19
