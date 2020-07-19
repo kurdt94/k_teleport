@@ -11,6 +11,7 @@ REDM : Teleport Script with admin support ( Teleport to waypoint, custom X,Y,Z o
     "tp -283.47698 833.24420" -- teleport to X,Y 
     "tp -283.47698 833.24420 119.50105" -- teleport to X,Y,Z
     "tp back" -- teleport back to your last used teleport
+    "tp save YOURKEY" -- save current location for later use ( use: tp YOURKEY )  
     
 # configuration [config.lua]
     " adminOnly can be enabled or disabled " (default: on)
