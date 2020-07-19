@@ -21,3 +21,54 @@ REDM : Teleport Script with admin support ( Teleport to waypoint, custom X,Y,Z o
     
 # notes
 - last update: 2020-07-19
+
+# default preset-locations
+taken from : https://www.mod-rdr.com/wiki/pages/list-of-rdr2-teleports/
+
+| key  | location |
+| ------------- | ------------- |
+| emerald | "Emerald Ranch Fence" |
+| ufo_house | "UFO Cult House" |
+| rhodes | "Rhodes" |
+| braithwaite | "Braithwaite Manor" |
+| caliga | "Rhodes Sheriff Station" |
+| stdenis | "Saint Denis Entrance" |
+| stdenis_sheriff | "Saint Denis Police Dept" |
+| cornwall | "Cornwall Freight" |
+| stdenis_paperboy | "Saint Denis Paperboy" |
+| stdenis_post | "Saint Denis Post Office" |
+| vanhorn | "Van Horn" |
+| annesburg | "Annesburg" |
+| annesburg_mines | "Annesburg Mines" |
+| willards | "Willard's Rest (and Waterfalls)" |
+| doverhill | "Doverhill (Tesla Coil)" |
+| ambarino | "Ambarino" |
+| veteran_home | "Veteran's Homestead" |
+| grizzlies | "Grizzlies Train Station (Bridge/Large Waterfall)" |
+| barrow_lagoon | "Barrow Lagoon" |
+| mount_hagen | "Mount Hagen" |
+| frozen_couple | "Frozen Couple" |
+| grizzlies_camp | "Grizzlies Camp (Tutorial Area)" |
+| montos_rest | "Monto's Rest (Building Camp)" |
+| fort_wallace | "Fort Wallace" |
+| valentine_sheriff | "Valentine Sheriff Station" |
+| strawberry | "Strawberry" |
+| strawberry_sheriff | "Strawberry Sheriff Station" |
+| tanners_reach | "Tanner's Reach" |
+| swadlass_point | "Swadlass Point" |
+| upper_montana | "Upper Montana River" |
+| manzanita_post | "Manzanita Post" |
+| native_attack | "Native Attack Site" |
+| macfarlanes_ranch | "Macfarlane's Ranch" |
+| roots_chapel | "Roots Chapel" |
+| armadillo | "Armadillo" |
+| benedict_point | "Benedict Point" |
+| tumbleweed | "Tumbleweed" |
+| rathskeller_fork | "Rathskeller Fork" |
+| ridgewood_farm | "Ridgewood Farm" |
+| mercer_station | "Mercer Station" |
+
+
+
+
+    
