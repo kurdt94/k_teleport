@@ -10,12 +10,13 @@ REDM : Teleport Script with admin support ( Teleport to waypoint, custom X,Y,Z o
     "tp valentine_sheriff"  -- teleport to sheriff in valentine
     "tp -283.47698 833.24420" -- teleport to X,Y 
     "tp -283.47698 833.24420 119.50105" -- teleport to X,Y,Z
-
+    "tp back" -- teleport back to your last used teleport
+    
 # configuration [config.lua]
     " adminOnly can be enabled or disabled " (default: on)
     " ScreenFadeOut can be disabled " (default: on)
     " enable or disable userGroups " (default: admin AND superadmin)
-    " add or remove preset-waypoints "
+    " add or remove preset-waypoints " 
     " Translation can be done here"
     
 # notes
