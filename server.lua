@@ -9,13 +9,12 @@ AddEventHandler('k:tp', function (target)
 
         if Config.enable_adminGroups[user.getGroup()] == true then
             if user == nil then
-                print("ERROR: User does not exist")
             else
-                --- Teleport
                 TriggerClientEvent('k:teleport',_source,_source,_target)
             end
         else
-                print("AUTH: Teleport command not allowed")
+              print("user : " .. _source .. " " .. Locale.auth_fail)
+              TriggerClientEvent('k:alert',_source,Locale.auth_fail)
         end
     end)
 end)

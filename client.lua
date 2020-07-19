@@ -36,6 +36,11 @@ function ScreenFadeIn()
     return
 end
 
+RegisterNetEvent('k:alert')
+AddEventHandler('k:alert', function(msg)
+    print(msg)
+end)
+
 RegisterNetEvent('k:teleport')
 AddEventHandler('k:teleport', function(source,target)
     local ped = PlayerPedId()
@@ -59,6 +64,7 @@ AddEventHandler('k:teleport', function(source,target)
 
     else
         -- Z = user input
+        print(target.x, target.y, target.z)
         SetEntityCoords(ped, target.x, target.y, target.z)
     end
 
@@ -74,7 +80,7 @@ AddEventHandler('k:teleport', function(source,target)
 end)
 
 RegisterCommand("tp", function(source, args, rawCommand)
-    print(":: Teleport ::")
+    print(Locale.title)
     local _source = source
     local _player = PlayerPedId()
     local _waypoint = GetWaypointCoords()
@@ -83,13 +89,13 @@ RegisterCommand("tp", function(source, args, rawCommand)
     if DoesEntityExist(_player) and not IsEntityDead(_player) then
         -- no arguments (or if you fuck up with a space)
         if not args[1] or args[1] == ' ' then
-            print("> no arguments found")
+            print(Locale.arg_not_found)
 
             -- GetWaypointCoords() always returns Vector3
             if isVectorEmpty(_waypoint) then
-                print("> no waypoint found")
+                print(Locale.wp_not_found)
             else
-                print("> waypoint found")
+                print(Locale.wp_found)
                 local target = _waypoint
 
                 if Config.enable_adminOnly == true then
@@ -112,7 +118,7 @@ RegisterCommand("tp", function(source, args, rawCommand)
                         TriggerEvent('k:teleport',_player,target)
                     end
                 else
-                    print("> waypoint does not exist")
+                    print(Locale.preset_not_found)
                 end
             else
                 local target = {}
@@ -132,13 +138,13 @@ RegisterCommand("tp", function(source, args, rawCommand)
                         TriggerEvent('k:teleport',_player,target)
                     end
                 else
-                    print("> invalid waypoint")
+                    print(Locale.wp_invalid)
                 end
 
             end
         end
     else
-        print("> not alive")
+        print(Locale.not_alive)
     end
 end, false)
 

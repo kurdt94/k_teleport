@@ -1,4 +1,5 @@
 Config = {}
+Locale = {}
 
 Config.enable_fadeOut = true
 Config.fadeTime = 2000
@@ -7,6 +8,15 @@ Config.enable_adminGroups = {
     ["admin"] = true,
     ["superadmin"] = true,
 }
+
+Locale.title = ":: Teleport ::"
+Locale.wp_found = "> Waypoint found"
+Locale.wp_not_found = "> No waypoint found"
+Locale.wp_invalid = "> Invalid waypoint"
+Locale.preset_not_found = "> Preset does not exist"
+Locale.arg_not_found = "> No arguments found"
+Locale.auth_fail = "> Teleport command not allowed"
+Locale.not_alive = "> Not alive"
 
 -- waypoints list ( unreachable locations I left out )
 -- [name] is never used, but kept here for identification
