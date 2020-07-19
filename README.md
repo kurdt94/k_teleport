@@ -1,4 +1,4 @@
-# k_teleport
+# k_teleport [tp command]
 REDM : Teleport Script with admin support ( Teleport to waypoint, custom X,Y,Z or one of the preset locations )
 
 # installation
@@ -68,8 +68,3 @@ taken from : https://www.mod-rdr.com/wiki/pages/list-of-rdr2-teleports/
 | rathskeller_fork | "Rathskeller Fork" |
 | ridgewood_farm | "Ridgewood Farm" |
 | mercer_station | "Mercer Station" |
-
-
-
-
-    
