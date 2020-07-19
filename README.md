@@ -1,5 +1,5 @@
 # k_teleport
-REDM : Teleport Script ( Teleport to waypoint, custom X,Y,Z or one of the preset locations )
+REDM : Teleport Script with admin support ( Teleport to waypoint, custom X,Y,Z or one of the preset locations )
 
 # installation
 - add "k_teleport" to your server RESOURCES folder
