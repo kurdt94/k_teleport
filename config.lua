@@ -59,7 +59,7 @@ Config.waypoints = {
     ["macfarlanes_ranch"] = {x=-2333.056, y=-2350.935, z=63.20446, name="Macfarlane's Ranch"},
     ["roots_chapel"] = {x=-3322.755, y=-2833.409, z=-6.234455, name="Roots Chapel"},
     ["armadillo"] = {x=-3665.947, y=-2612.442, z=-14.08434, name="Armadillo"},
-    ["benedict point"] = {x=-5245.899, y=-3470.671, z=-22.09243, name="Benedict Point"},
+    ["benedict_point"] = {x=-5245.899, y=-3470.671, z=-22.09243, name="Benedict Point"},
     ["tumbleweed"] = {x=-5517.375, y=-2936.821, z=-2.219434, name="Tumbleweed"},
     ["rathskeller_fork"] = {x=-5165.079, y=-2143.5, z=11.77453, name="Rathskeller Fork"},
     ["ridgewood_farm"] = {x=-4823.544, y=-2711.381, z=-13.74694, name="Ridgewood Farm"},
