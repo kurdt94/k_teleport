@@ -9,6 +9,7 @@ Config.enable_adminGroups = {
 }
 
 -- waypoints list ( unreachable locations I left out )
+-- [name] is never used, but kept here for identification
 -- https://www.mod-rdr.com/wiki/pages/list-of-rdr2-teleports/
 Config.waypoints = {
     ["emerald"] = {x=1417.818, y=268.0298, z=89.61942, name="Emerald Ranch Fence"},
