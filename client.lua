@@ -49,6 +49,7 @@ AddEventHandler('k:teleport', function(source,target)
             if foundground then
                 print(target.x, target.y, groundZ)
                 SetEntityCoords(ped, target.x, target.y, groundZ)
+                Citizen.InvokeNative(0x14F3947318CA8AD2, 1.0, 1.0) -- _CLAMP_GAMEPLAY_CAM_YAW
                 if Config.enable_fadeOut then ScreenFadeIn() end
                 break
             end
@@ -59,6 +60,7 @@ AddEventHandler('k:teleport', function(source,target)
     else
         print(target.x, target.y, target.z)
         SetEntityCoords(ped, target.x, target.y, target.z)
+        Citizen.InvokeNative(0x14F3947318CA8AD2, 1.0, 1.0) -- _CLAMP_GAMEPLAY_CAM_YAW
     end
 
     -- ScreenFadeIn :
@@ -114,7 +116,7 @@ RegisterCommand("tp", function(source, args, rawCommand)
                         return
                     end
                 end
-                
+
                 if Config.waypoints[args[1]] ~= nil then
                     local target = vector3(Config.waypoints[args[1]].x,Config.waypoints[args[1]].y,Config.waypoints[args[1]].z)
                     if Config.enable_adminOnly == true then
