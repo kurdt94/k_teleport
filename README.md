@@ -8,8 +8,8 @@ REDM : Teleport Script ( Teleport to waypoint, custom X,Y,Z or one of the preset
 # usage
     "tp"  -- teleport waypoint
     "tp valentine_sheriff"  -- teleport to sheriff in valentine
-    "tp -283.47698 833.24420" -- teleport to X , Y 
-    "tp -283.47698 833.24420 119.50105" -- teleport to X , Y, Z
+    "tp -283.47698 833.24420" -- teleport to X,Y 
+    "tp -283.47698 833.24420 119.50105" -- teleport to X,Y,Z
 
 # notes
 - Support for admin_only not implemented yet.
